@@ -16,6 +16,7 @@ public class CustomUserDetails implements UserDetails {
         this.user = user;
     }
 
+    // ----- 계정 상태를 반환하는 메서드들 -----
     @Override
     public boolean isAccountNonExpired() {
         return true;
@@ -36,6 +37,7 @@ public class CustomUserDetails implements UserDetails {
         return true;
     }
 
+    // 권한 관리
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
 
